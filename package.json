@@ -1,0 +1,22 @@
+{
+  "name": "frontend-convention",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Dentium Frontend Convention",
+  "repository": "https://github.com/DentiumIctIT/frontend-convention.git",
+  "author": "dentium <dentiumit@dentium.com>",
+  "license": "DENTIUM",
+  "devDependencies": {
+    "eslint": "^8.39.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.8"
+  },
+  "lint-staged":{
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

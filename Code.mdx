@@ -1,0 +1,76 @@
+# Code Convention (공통)
+
+## 기본 규칙
+
+### 1. 폴더
+- 폴더명은 소문자로 작성한다.
+- 폴더명은 복수형으로 작성한다.
+- 폴더명은 의미있게 작성한다.
+- 폴더명은 영어로 작성한다.
+- 폴더명은 카멜케이스로 작성한다.
+
+> - 예시) components, pages, hooks, utils, types
+
+### 2. 파일
+- 파일명은 소문자로 작성한다.
+- 파일명은 의미있게 작성한다.
+- 파일명은 영어로 작성한다.
+- 파일명은 카멜케이스로 작성한다.
+- 파일명은 확장자를 포함하여 작성한다.
+- 컴포넌트 파일명은 컴포넌트명으로 작성한다.
+- 컴포넌트 파일명은 컴포넌트명을 대문자로 시작한다.
+
+> - 예시) useInput.ts, useFetch.ts, useDebounce.ts, DeskDetailContainer.tsx, ChartDetailPresenter.jsx
+
+### 3. 변수
+- 변수명은 소문자로 작성한다. (단, 전역 상수는 대문자로 작성한다.)
+- 변수명은 의미있게 작성한다.
+- 변수명은 영어로 작성한다.
+- 변수명은 카멜케이스로 작성한다.
+- 대문자 상수명을 작성할 때, 단어와 단어 사이는 언더바(_)로 구분한다.
+
+> - 예시) const name: string = '김코딩'
+> - 예시) const MAX_NUMBER: number = 100
+
+### 4. 함수
+- 함수명은 소문자로 작성한다.
+- 함수명은 의미있게 작성한다.
+- 함수명은 영어로 작성한다.
+- 함수명은 카멜케이스로 작성한다.
+- 페이지의 default 함수명은 `Index`로 작성한다.
+- 페이지의 함수는 'function' 키워드를 사용한다.
+- 컴포넌트의 default 함수명은 파일명과 동일하게 작성한다.
+- 컴포넌트의 함수는 'const' 키워드를 사용한다. 즉, 애로우 함수를 사용한다.
+- 훅의 default 함수명은 `use`로 시작한다.
+- 핸들러 함수명은 `handle`로 시작한다.
+
+> - 예시) function getName(): string { return '김코딩' }
+> - 예시) function Index(): JSX.Element { return <div>Index</div> }
+> - 예시) function DeskDetailContainer(): JSX.Element { return <div>DeskDetailContainer</div> }
+
+### 5. 인터페이스
+- 인터페이스명은 `I`로 시작한다.
+- 인터페이스명은 카멜케이스로 작성한다.
+- 인터페이스명은 의미있게 작성한다.
+- 인터페이스명은 영어로 작성한다.
+
+> - 예시) interface IProps { name: string }
+
+### 6. 타입
+- 타입명은 `T`로 시작한다.
+- 타입명은 카멜케이스로 작성한다.
+- 타입명은 의미있게 작성한다.
+- 타입명은 영어로 작성한다.
+- 타입명은 `type` 예약어로만 작성한다.
+- 타입명은 `props`로 정의된 것만 컴포넌트에 직접 작성한다.
+- props를 제외하고 나머지 타입은 types 폴더에 작성한다.
+- *.d.ts에 작성한다.
+
+> - 예시) type TProps = { name: string }
+> - 예시) type TName = string
+> - 예시) type TName = '김코딩' | '박해커'
+> - 예시) type DeskDetailContainerProps = { name: string } => props를 정의할 경우 컴포넌트와 명칭을 일치시킨 후 'T'를 생략하고 끝에 'Props'를 붙인다. 해당 컴포넌트에 직접 작성한다.
+
+### 7. 참조
+- 참조는 `import`를 사용한다.
+- React.*로 훅을 사용하지 않는다.
