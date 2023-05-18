@@ -1,0 +1,22 @@
+# GraphQL Convention (공통)
+
+## 기본 규칙
+
+쿼리 상수를 정의할 때 다음과 같은 규칙을 따른다.
+
+- 상수 이름은 대문자로 작성한다.
+- MUTATION 접두사는 ['CREATE', 'UPDATE', 'REMOVE'] 내에서만 활용한다.
+- QUERY 접두사는 ['FIND_ALL','FIND_ONE'] 내에서만 활용한다.
+- 접미사는 ['QUERY','MUTATION'] 내에서만 활용한다.
+- 상수 이름은 `_` (언더바)로 구분한다.
+- 최소 단어 단위(형태소 단위)로 구분한다.  AUTORECALL (X) -> AUTO_RECALL (O)
+- 구조 : 접두사_단어_단어_..._단어_접미사 <br/>
+- 예시:
+
+|resolver|const|
+|:---:|:---:|
+|Patient_FindAll|FIND_ALL_PATIENT_QUERY|
+|Patient_FindById|FIND_ONE_PATIENT_QUERY|
+|Patient_Update|UPDATE_PATIENT_MUTATION|
+|Patient_Create|CREATE_PATIENT_MUTATION|
+|Patient_Remove|REMOVE_PATIENT_MUTATION|
